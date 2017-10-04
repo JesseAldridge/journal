@@ -1,0 +1,4 @@
+#!/usr/bin/python
+import switch
+
+switch.switch(False)
