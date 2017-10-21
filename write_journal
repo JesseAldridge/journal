@@ -6,6 +6,7 @@ import shutil
 import switch
 
 switch.switch(True)
+print 'unlocked'
 
 now = datetime.now()
 timestamp = '_'.join(str(now).split()).rsplit('.', 1)[0].replace(':', '-')
@@ -13,5 +14,7 @@ path = 'decrypted/{}.txt'.format(timestamp)
 with open(path, 'w') as f:
   f.write('')
 os.system('open {}'.format(path))
+
 switch.switch(False)
+print 'locked'
 shutil.rmtree('decrypted')
