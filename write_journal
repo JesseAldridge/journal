@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import os
 from datetime import datetime
+import shutil
 
 import switch
 
@@ -12,3 +13,5 @@ path = 'decrypted/{}.txt'.format(timestamp)
 with open(path, 'w') as f:
   f.write('')
 os.system('open {}'.format(path))
+switch.switch(False)
+shutil.rmtree('decrypted')
