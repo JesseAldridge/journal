@@ -13,7 +13,7 @@ def switch(should_unlock):
   if not os.path.exists(in_dir):
     os.mkdir(in_dir)
 
-  password = getpass.getpass()
+  password = getpass.getpass('Enter hash password:')
 
   for in_path in glob.glob('{}/*.txt'.format(in_dir)):
     out_path = in_path.replace(in_dir, out_dir, 1)
